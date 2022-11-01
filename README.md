@@ -10,6 +10,8 @@
 
 The app allows a GitHub user to fetch a list of its repositories, search global repositories by their name, and display chosen repository info.
 
+Demo project available here: https://github-repo-browser-1-11.web.app/
+
 ## Technologies
 
 - Typescript 4.8
