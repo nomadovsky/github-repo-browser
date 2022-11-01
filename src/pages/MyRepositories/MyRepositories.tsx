@@ -13,6 +13,7 @@ import {
 	TablePagination,
 } from '@mui/material';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useUserRepositories from '../../hooks/useUserRepositories';
 import formatDate from '../../utils/formatDate';
 
@@ -84,7 +85,12 @@ const MyRepositories = (): JSX.Element => {
 				<List>
 					{data &&
 						data.user.repositories.edges.map(({ node }) => (
-							<ListItem button key={node.id}>
+							<ListItem
+								button
+								key={node.id}
+								component={Link}
+								to={`/${node.id}`}
+							>
 								<ListItemAvatar>
 									<Avatar
 										src={data.user.avatarUrl}
