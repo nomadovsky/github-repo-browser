@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/github-repo-browser/static/js/main.7c009eca.js",
+    "main.js": "/github-repo-browser/static/js/main.d884d4a9.js",
     "index.html": "/github-repo-browser/index.html",
-    "main.7c009eca.js.map": "/github-repo-browser/static/js/main.7c009eca.js.map"
+    "main.d884d4a9.js.map": "/github-repo-browser/static/js/main.d884d4a9.js.map"
   },
   "entrypoints": [
-    "static/js/main.7c009eca.js"
+    "static/js/main.d884d4a9.js"
   ]
 }
