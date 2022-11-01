@@ -1,6 +1,6 @@
 import { Alert, Container, CircularProgress, Typography } from '@mui/material';
-import useRepoDetails from '../../../hooks/useRepoDetails';
 import { useParams } from 'react-router-dom';
+import useRepoDetails from '../../../hooks/useRepoDetails';
 
 const Details = () => {
 	const { repoId } = useParams();

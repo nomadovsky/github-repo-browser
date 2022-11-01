@@ -1,11 +1,11 @@
-import { Box } from '@mui/material';
-import Navbar from './layout/Navbar/Navbar';
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Routes, Route } from 'react-router-dom';
+import { Box } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Navbar from './layout/Navbar/Navbar';
+import FindRepository from './pages/FindRepository/FindRepository';
 import MyRepositories from './pages/MyRepositories/MyRepositories';
 import RepositoryPage from './pages/RepositoryPage/RepositoryPage';
-// import FindRepository from './pages/FindRepository/FindRepository';
 
 const darkTheme = createTheme({
 	palette: {
@@ -28,7 +28,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<MyRepositories />} />
 					<Route path="/:repoId" element={<RepositoryPage />} />
-					<Route path="/search" element={'<FindRepository />'} />
+					<Route path="/search" element={<FindRepository />} />
 				</Routes>
 			</Box>
 		</ThemeProvider>

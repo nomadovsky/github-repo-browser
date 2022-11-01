@@ -1,6 +1,5 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useCommits from '../../../hooks/useCommits';
-
 import {
 	Alert,
 	CircularProgress,
@@ -11,12 +10,11 @@ import {
 	TablePagination,
 	Typography,
 } from '@mui/material';
+import useCommits from '../../../hooks/useCommits';
 import formatDate from '../../../utils/formatDate';
-import { useState } from 'react';
 
 const CommitsList = () => {
 	const RESULTS_PER_PAGE = 5;
-
 	const [totalPageNumber, setTotalPageNumber] = useState(0);
 	const [before, setBefore] = useState('');
 	const [page, setPage] = useState(0);

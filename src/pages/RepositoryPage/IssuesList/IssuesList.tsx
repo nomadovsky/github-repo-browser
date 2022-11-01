@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
 	Alert,
@@ -9,13 +10,11 @@ import {
 	TablePagination,
 	Typography,
 } from '@mui/material';
-import formatDate from '../../../utils/formatDate';
-import { useState } from 'react';
 import useIssues from '../../../hooks/useIssues';
+import formatDate from '../../../utils/formatDate';
 
 const IssuesList = () => {
 	const RESULTS_PER_PAGE = 10;
-
 	const [totalPageNumber, setTotalPageNumber] = useState(0);
 	const [before, setBefore] = useState('');
 	const [page, setPage] = useState(0);
@@ -34,7 +33,6 @@ const IssuesList = () => {
 		},
 		onCompleted: (data) => {
 			const issues = data.node.issues;
-			console.log(issues);
 			setTotalPageNumber(issues.totalCount);
 			setBefore(issues.pageInfo.startCursor);
 			setAfter(issues.pageInfo.endCursor);

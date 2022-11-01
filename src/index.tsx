@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import {
 	ApolloClient,
 	InMemoryCache,
@@ -7,8 +8,6 @@ import {
 	createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter } from 'react-router-dom';
-
 import App from './App';
 
 const root = ReactDOM.createRoot(

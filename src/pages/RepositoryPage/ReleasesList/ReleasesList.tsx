@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
 	Alert,
@@ -9,13 +10,11 @@ import {
 	TablePagination,
 	Typography,
 } from '@mui/material';
-import formatDate from '../../../utils/formatDate';
-import { useState } from 'react';
 import useReleases from '../../../hooks/useReleases';
+import formatDate from '../../../utils/formatDate';
 
 const ReleasesList = () => {
 	const RESULTS_PER_PAGE = 5;
-
 	const [totalPageNumber, setTotalPageNumber] = useState(0);
 	const [before, setBefore] = useState('');
 	const [page, setPage] = useState(0);
@@ -33,7 +32,6 @@ const ReleasesList = () => {
 			last: null,
 		},
 		onCompleted: (data) => {
-			console.log(data);
 			const releases = data.node.releases;
 			setTotalPageNumber(releases.totalCount);
 			setBefore(releases.pageInfo.startCursor);
